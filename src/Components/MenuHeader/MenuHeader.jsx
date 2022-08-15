@@ -10,13 +10,13 @@ function MenuHeader() {
   useEffect(() => {
     dispatch(getAllCategory());
   }, [dispatch]);
+
   const renderCategories = (categories) => {
     let myCategories = [];
-    for (let category of categories) {
-    //   console.log({category});
-      myCategories.push(
-          <li key={category.name}>
 
+    for (let category of categories) {
+      myCategories.push(
+        <li key={category.name}>
           {category.parentId ? (
             <a
               href={`/${category.slug}?cid=${category._id}&type=${category.type}`}
@@ -32,9 +32,10 @@ function MenuHeader() {
         </li>
       );
     }
+
     return myCategories;
-  }; 
-  console.log(renderCategories(category.categories))
+  };
+
   return (
     <div className="menuHeader">
       <ul>
