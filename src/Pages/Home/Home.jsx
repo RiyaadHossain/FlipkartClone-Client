@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../../Components/Header/Header";
+import Layout from "../../Components/Layout/Layout";
 
 function Home() {
   return (
-    <div>
-      <Header />
-    </div>
+      <Layout>
+        <h1>This is Home Page</h1>
+      </Layout>
   );
 }
 

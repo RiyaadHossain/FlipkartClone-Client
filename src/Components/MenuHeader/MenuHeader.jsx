@@ -11,6 +11,8 @@ function MenuHeader() {
     dispatch(getAllCategory());
   }, [dispatch]);
 
+  console.log(category);
+
   const renderCategories = (categories) => {
     let myCategories = [];
 
@@ -19,7 +21,7 @@ function MenuHeader() {
         <li key={category.name}>
           {category.parentId ? (
             <a
-              href={`/${category.slug}?cid=${category._id}&type=${category.type}`}
+              href={category.name}
             >
               {category.name}
             </a>
