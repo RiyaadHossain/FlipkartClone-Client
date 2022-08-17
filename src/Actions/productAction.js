@@ -6,7 +6,7 @@ export const getAllProduct = (slug) => {
 
         dispatch({ type: productContants.GETALL_PRODUCT_REQUEST })
 
-        const res = await axiosAPI.get("/product/getProduct")
+        const res = await axiosAPI.get(`/product/getProductBySlug/${slug}`)
         console.log(res.data.products);
         if (res.status === 200) {
             const { products, productByPrice } = res.data
